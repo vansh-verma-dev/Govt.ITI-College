@@ -1,163 +1,187 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.body {
-  background-color: white;
+
+body {
+  background: #f5f5f5;
 }
-.head {
-  height: 10vh;
-  width: 100%;
-  background-color: blue;
-  border-bottom: 1px solid white;
-  display: flex;
+ 
+/* ===== HEADER ===== */
+.top-bar {
+  background: linear-gradient(blue, rgb(54,54,255));
+  color: white;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid white;
+ 
 }
-.logo {
-  display: flex;
-  padding-left: 30px;
+
+.logo h1 {
+  font-size: 26px;
 }
-.logotext {
-  color: white;
+
+.logo p {
+  font-size: 14px;
 }
-.loginbtn {
-  background-color: orange;
-  outline: none;
+
+.login-btn {
+  background: orange;
   border: none;
-  height: 30px;
-  width: 110px;
-  margin-right: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
 }
-.foot {
-  height: 30px;
-  background-color: blue;
+
+/* ===== NAV ===== */
+.nav-bar {
+  background: linear-gradient(blue, rgb(54,54,255));
+}
+
+.nav-bar ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.foot ul a {
-  color: white;
-  text-decoration: none;
-  margin-left: 30px;
-}
-/* ----------hero-section-------- */
-.hero-section {
-  height: 60vh;
-  width: 100%;
-  background-image: url("assits/Capture.PNG");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-}
-.title {
-  margin-left: 10rem;
-}
-.title h1 {
-  font-size: 35px;
-  color: rgb(255, 115, 0);
-}
-.title p {
-  font-size: 18px;
-  color: white;
-}
-.title button {
-  background-color: rgb(255, 145, 1);
-  outline: none;
-  border: none;
-  height: 40px;
-  width: 120px;
-  margin-top: 10px;
-}
-/* <!-- --------------root-section-------------- --> */
-.root {
-  width: 100%;
-  height: auto;
-}
-.container {
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
 }
 
-.card {
-  width: 220px;
-  background-color: blue;
-}
-
-
-.card span {
-  display: flex;
-  padding-top: 10px;
-  justify-content: space-around;
-}
-.card span p {
+.nav-bar ul li a {
   color: white;
-  font-size: 22px;
-  padding-left: 10px;
-  padding-top: 5px;
-  margin-right: 20px;
+  text-decoration: none;
+  padding: 10px 18px;
+  display: block;
 }
-.card img {
-  height: 60px;
+
+.nav-bar ul li a:hover {
+  background: rgba(255,255,255,0.2);
 }
-.card hr {
+
+/* ===== HERO ===== */
+.hero {
+  height: 60vh;
+  background: url("https://i.pinimg.com/1200x/15/09/96/150996d5036e9230edc3fc48decaecd4.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  padding: 100px 40px;
+}
+
+.hero-content h1 {
+  color: orange;
+  font-size: 32px;
+}
+
+.hero-content h2 {
+  font-size: 40px;
+}
+
+.hero-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+}
+
+ 
+/* ===== ABOUT ===== */
+.about {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 30px;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  width: 45%;
+}
+
+.about-text h2 {
+  color: rgb(10,10,107);
+  font-size: 32px;
+}
+
+.about-text h4 {
+  color: orange;
+  margin: 10px 0;
+    border-bottom:1px solid orange ;
+    border-top: 1px solid orange;
+    padding: 10px;
+}
+
+.about-text p {
+  font-size: 18px;
+
+}
+
+.about-text button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: linear-gradient(blue, rgb(54,54,255));
+  color: white;
+  border: none;
+}
+
+.about-images {
+  width: 45%;
+}
+ 
+.about-images img {
+  width: 240px;
   margin: 10px;
+  border: 4px solid #ddd;
 }
-.card a {
+
+/* ===== FOOTER ===== */
+footer {
+  background: linear-gradient(rgb(14,14,109), blue);
   color: white;
   text-align: center;
-  text-decoration: none;
-  padding-left: 10px;
-}
-@media (max-width: 480px) {
-  .container {
-    justify-content: space-between;
-    gap:5px;
-    padding: 0 8px;
-  }
-
-  .card {
-    width: 45%; /* 2 cards ek line me */
-  }
-
-  .card span p {
-    font-size: 16px;
-  }
-
-  .card img {
-    height: 45px;
-  }
-
-  .card a {
-    font-size: 14px;
-  }
+  padding: 20px;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .logo h1{
+        font-size: 20px;
+    }
+    .logo p{
+font-size: 12px;
+    }
+    .login-btn{
+        width: 90px;
+        font-size: 11px;
+        padding: 5px;
+        color: rgb(36, 35, 35);
+    }
+    .hero{
+        height: 40vh;
+    }
+  .hero-content {
+    padding: 60px 20px;
+  }
 
-@media (max-width: 480px) {
-  .logo {
-    padding-left: 10px;
+  .about-text,
+  .about-images {
+    width: 100%;
+    text-align: center;
   }
-  .logotext h1 {
-    font-size: 19px;
-  }
-  .logotext p {
-    font-size: 12px;
-  }
-  .foot {
-    padding: 10px;
-  }
-  .hero-section {
-    height: 40vh;
-  }
-  .title {
-    margin-left: 10px;
+  .about-text p{
+    text-align: left;
   }
 }
