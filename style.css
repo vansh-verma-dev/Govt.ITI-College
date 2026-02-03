@@ -196,7 +196,8 @@ body {
 }
 
 .footer-bottom {
-  background: rgb(5,5,70);
+  background: linear-gradient(rgb(57, 57, 248),blue);
+  color: white;
   text-align: center;
   padding: 20px;
   font-size: 14px;
@@ -231,4 +232,7 @@ body {
   .about-text p {
     text-align: left;
   }
+}
+.root{
+  height: auto;
 }

@@ -1,1 +1,6 @@
-console.log('this website created by vansh verma');
+ 
+const root = document.querySelector('.root');
+ function coursesbtn(){
+    root.innerHTML = ``
+   
+ }
