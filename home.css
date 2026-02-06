@@ -6,7 +6,9 @@
 }
 
 body {
-  background: antiquewhite;
+  background: rgb(231, 231, 231);
+  width: 100%;
+  height: 100vh;
 }
 
 header {
@@ -58,7 +60,8 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  background-image: url("assits/bg1.jpeg");
+  /* background-image: url("assits/bg1.jpeg"); */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assits/bg1.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,38 +136,76 @@ header {
   font-size: 12px;
   font-style: italic;
 }
- 
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-foot {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 260px;
-    background: linear-gradient(rgb(58, 58, 255), blue);
-    transition: 0.4s;
-    padding-top: 80px;
-    z-index: 3000;
-  }
-
-  .nav-foot.active {
-    right: 0;
-  }
-
-  .nav-foot ul {
-    flex-direction: column;
-    gap: 25px;
-    padding-left: 30px;
-  }
-
-  .nav-foot ul li a {
-    font-size: 18px;
-  }
+.about-section{
+  margin-top: 10px;
+  height: 90vh;
 }
+.about-head{
+  text-align: center;
+  color: rgb(3, 3, 44);
+}
+.about-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 90%;
+  gap: 30px;
+  padding: 20px;
+}
+.images{
+   width: 40vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+ 
+}
+.images img{
+ width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-tittle{
+  width: 50vw;
+  padding: 20px;
+}
+.about-tittle h1{
+   text-align: left;
+  color: rgb(3, 3, 44);
+  margin-bottom: 10px;
+}
+.about-tittle p{
+  font-size: 18px;
+  font-style: italic;
+}
+.about-card{
+ margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.about-card .card{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+.about-card .card h1{
+  background-color: rgb(3, 3, 44);
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 0;
+}
+.about-card h2{
+   font-size: 16px;
+  margin: 0;
+}
+
 
 body.menu-open::before {
   content: "";
@@ -173,23 +214,101 @@ body.menu-open::before {
   background: rgba(0, 0, 0, 0.4);
   z-index: 2500;
 }
+/* --- Mobile Responsive  --- */
+ 
 
+@media (max-width: 768px) {
+ 
+  .menu-btn {
+    display: block;
+  }
+  .nav-foot ul {
+    display: none; 
+  }
+  .hero-section {
+    height: auto;
+    min-height: 80vh; 
+ 
+  }
 
-@media (max-width:768px){
-.hero-title{
-    padding-left: 10px;
-}
-.hero-title h1{
-    font-size: 32px;
-}
-.hero-title p{
-    color: wheat;
-    font-size: 15px;
-}
-.hero-title a button{
-   margin-left: 20px;
-} 
-.hero-details{
-    display: none;
-}
+  .hero-title {
+    padding-left: 0;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 26px;
+  }
+  .hero-details {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    background-color: rgba(48, 48, 48, 0.7);  
+    padding: 10px;
+    margin-top: 20px;
+    gap: 5px;
+  }
+
+  .hero-details hr {
+ display: none;  
+  }
+
+  .hero-title a button {
+    width: 45%;  
+    font-size: 16px;
+    margin-left: 5px  ;
+  }
+
+  
+  .about-section {
+    height: auto;
+
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .images {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);  
+  }
+
+  .about-tittle {
+    width: 100%;
+    padding: 10px;
+   
+  }
+ 
+  .about-card {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+  }
+
+  .about-card .card {
+    padding: 10px;
+    flex-direction: column; /* Icon upar, text niche taaki space bache */
+    text-align: center;
+  }
+
+  .about-card .card h1 {
+   
+    font-size: 18px;
+    padding: 5px 10px;
+    text-align: left;
+  }
+
+  .about-card h2 {
+    font-size: 18px;
+      text-align: left;
+      padding-left: 10px;
+  }
+  .about-card p{
+    font-size: 14px;
+    text-align: left;
+      padding-left: 10px;
+  }
 }
