@@ -54,7 +54,7 @@ header {
   text-decoration: none;
   font-weight: 500;
 }
-
+ /* ----hero-section---- */
 .hero-section {
   height: 60vh;
   width: 100%;
@@ -104,6 +104,7 @@ header {
   height: 40px;
   border-radius: 5px;
   margin-top: 10px;
+  cursor: pointer;
 }
 .hero-title a:last-child button {
   background-color: rgb(69, 97, 255);
@@ -838,4 +839,28 @@ body.menu-open::before {
   .nav-foot.active{
     right:0;
   }
+}
+.contact-num{
+  display: flex;
+  align-items: center;
+  padding:5px;
+}
+.contact-num i{
+  font-size: 20px;
+  margin-right:5px;
+}
+.contact-num h3{
+  font-size: 15px;
+}
+
+#contactbtn{
+  background-color: #ffcc00;
+  height: 30px;
+  width: 120px;
+  border: none;
+}
+#contactbtn:hover{
+  background-color: #ffdd54;
+  color: rgb(0, 0, 0);
+  height: 32px;
 }
