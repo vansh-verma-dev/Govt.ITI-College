@@ -864,3 +864,10 @@ body.menu-open::before {
   color: rgb(0, 0, 0);
   height: 32px;
 }
+
+.admission-form{
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+ 
