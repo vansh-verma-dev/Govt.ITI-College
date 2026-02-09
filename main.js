@@ -15,3 +15,6 @@ document.addEventListener("click", () => {
 navMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+ 
+
