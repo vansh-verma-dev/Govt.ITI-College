@@ -137,6 +137,9 @@ header {
   font-size: 12px;
   font-style: italic;
 }
+
+
+/* ---about section--- */
 .about-section{
   margin-top: 10px;
   height: 90vh;
@@ -215,28 +218,27 @@ body.menu-open::before {
   background: rgba(0, 0, 0, 0.4);
   z-index: 2500;
 }
-
+/* ---coursces section--- */
 .Cources-section{
   padding:40px 10px;
 }
-
-/* heading */
+ 
 .Cources-section h1,
 .Cources-section p{
   text-align:center;
   color:rgb(3,3,44);
 }
 
-/* ===== GRID SYSTEM ===== */
+ 
 .cources-card-canten{
   display:grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 card per row */
+  grid-template-columns: repeat(3, 1fr);  
   gap:20px;
   padding:20px;
 
 }
 
-/* ===== CARD ===== */
+ 
 .cources-card{
   background:white;
   display:flex;
@@ -246,10 +248,15 @@ body.menu-open::before {
   padding:15px;
   border:1px solid #ddd;
   height:auto;
+  cursor: pointer;
   min-height:90px;
 }
 
-/* icon */
+ .cources-card:hover{
+  border-bottom: 3px solid #0077ff;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+ }
 .cources-card i{
   font-size:38px;
   color:orange;
@@ -361,6 +368,14 @@ body.menu-open::before {
   .Cources-section{
  height: 50vh;
  overflow-y: scroll;
+}
+#contactbtn{
+  display: none;
+}
+.menu-btn{
+  margin-right: 20px;
+  padding:5px;
+  text-align: right;
 }
 }
 
@@ -590,7 +605,7 @@ body.menu-open::before {
 
   .about-card .card {
     padding: 10px;
-    flex-direction: column; /* Icon upar, text niche taaki space bache */
+    flex-direction: column;
     text-align: center;
   }
 
