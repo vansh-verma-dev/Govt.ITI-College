@@ -1,89 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  <link rel="stylesheet" href="home.css">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITI Admission Form</title>
+  <link rel="stylesheet" href="admison.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
 </head>
 <body>
-  <section class="about-section">
 
-  <!-- row 1 -->
-  <div class="about-row">
-    <div class="about-text">
-      <h1>Take Your Education To The Next Level!</h1>
-      <p>
-        Government ITI College provides practical knowledge and real technical skills to students.
-        We focus on hands-on learning instead of only theory so that every student understands real industry work.
-        Our courses help students become confident, independent and job ready.
-        We also support students in interviews and career guidance.
-        Our goal is to create skilled workers who can easily get employment in companies or start their own work.
-      </p>
+<div class="container">
 
-      <div class="about-list">
-        <div>
-          <h3>Our Vision</h3>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Skilled Students</li>
-            <li><i class="fa-solid fa-check"></i> Practical Learning</li>
-            <li><i class="fa-solid fa-check"></i> Industry Training</li>
-            <li><i class="fa-solid fa-check"></i> Job Ready Courses</li>
-          </ul>
+  <div class="main-heading">
+    <h2>Government ITI Admission Form</h2>
+    <p>Please fill all required details carefully. Incorrect information may lead to rejection of application.</p>
+  </div>
+
+  <form>
+
+    <div class="section-title"><h3>Personal Details</h3></div>
+
+    <div class="personal-details">
+      <div class="personal-left">
+        <div class="field">
+          <label>Applicant Name</label>
+          <input type="text" placeholder="Enter applicant name">
         </div>
-
-        <div>
-          <h3>Our Mission</h3>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Modern Labs</li>
-            <li><i class="fa-solid fa-check"></i> Expert Teachers</li>
-            <li><i class="fa-solid fa-check"></i> Placement Support</li>
-            <li><i class="fa-solid fa-check"></i> Affordable Education</li>
-          </ul>
+        <div class="field">
+          <label>Father's Name</label>
+          <input type="text" placeholder="Enter father's name">
         </div>
+        <div class="field">
+          <label>Mother's Name</label>
+          <input type="text" placeholder="Enter mother's name">
+        </div>
+      </div>
+      <div class="personal-right">
+        <img id="preview">
+        <input type="file" accept="image/*" onchange="previewPhoto(event)">
       </div>
     </div>
 
-    <div class="about-image">
-      <img src="https://i.pinimg.com/736x/8c/5d/12/8c5d12a8ca891b5409f60d9e06f9c326.jpg">
-    </div>
-  </div>
-
-
-  <!-- row 2 (LEFT IMAGE RIGHT TEXT) -->
-  <div class="about-row second-row">
-
-    <div class="about-image">
-      <img src="https://i.pinimg.com/736x/b8/23/cd/b823cd36b217db2deb31783121dec25d.jpg">
+    <div class="address field">
+      <label>Full Address</label>
+      <textarea rows="4"></textarea>
     </div>
 
-    <div class="about-text">
-      <div class="about-card">
-        <div class="ab-card">
-          <h3>24+</h3>
-          <p>Years</p>
-        </div>
-        <p>Providing quality technical education for students</p>
+    <div class="row-2">
+      <div class="field">
+        <label>Mobile Number</label>
+        <input type="tel">
       </div>
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email">
+      </div>
+    </div>
 
-      <h1>How We Improve Student Skills?</h1>
-      <p>
-        Students learn by performing practical work in workshops and computer labs daily.
-        Teachers guide students step by step so they understand machines, tools and software properly.
-        Real project based learning helps students gain confidence in real situations.
-        We conduct internal tests, viva and practice sessions regularly.
-        Industrial visits are also arranged so students can see real company environments.
-        After course completion we provide placement support and interview preparation.
-        Our training system focuses on skill, discipline and future career success.
+    <div class="qualification">
+      <div class="section-title"><h3>Qualification Details</h3></div>
+      <div class="qual-row">
+        <select name="pass" id="">
+          <option value="pass ">Select pass</option>
+          <option value="">8th</option>
+          <option value="">10th</option>
+          <option value="">12th</option>
+          <option value="">Other</option>
+        </select>
+        <select name="pass" id="">
+          <option value="pass ">Select years</option>
+          <option value="">2024</option>
+          <option value="">2023</option>
+          <option value="">2022</option>
+          <option value="">2021</option>
+          <option value="">2020</option>
+          <option value="">2019</option>
+          <option value="">2018</option>
+          <option value="">2017</option>
+          <option value="">2016</option>
+        </select>
+        <input type="number" placeholder="persentage 00.00 %">
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:20px;">
+      <label>Select Trade</label>
+      <select>
+        <option>Select Trade</option>
+        <option>Electrician</option>
+        <option>Fitter</option>
+        <option>Welder</option>
+        <option>COPA</option>
+      </select>
+    </div>
+   <div class="section-title"><h3>Payment Details</h3></div>
+    <div class="payment-section">
+  <h2>Admission Fee Payment</h2>
+
+  <div class="payment-box">
+
+    <!-- Left Details -->
+    <div class="payment-details">
+      <h3>Government ITI College</h3>
+      <p><strong>Course:</strong> ITI Admission 2026</p>
+      <p><strong>Admission Fee:</strong> ₹500</p>
+
+      <ul>
+        <li>Scan QR code to pay admission fee</li>
+        <li>Payment screenshot is mandatory</li>
+        <li>Fee is non-refundable</li>
+      </ul>
+
+      <p class="upi-text">
+        <strong>UPI ID:</strong> govtiti@upi
       </p>
     </div>
+
+    <!-- Right QR -->
+    <div class="qr-box">
+      <p class="scan-text">Scan to Pay</p>
+      <img src="assits/qr-code.jpeg" alt="Payment QR Code">
+    </div>
+
   </div>
-</section>
+</div>
+
+
+    <div class="btns">
+      <button type="reset" class="reset"><i class="fa fa-rotate-left"></i> Reset</button>
+      <button type="submit" class="next">Next <i class="fa fa-arrow-right"></i></button>
+    </div>
+
+    <div class="help">
+      <strong>Help Desk:</strong> <i class="fa-solid fa-phone"></i>+91 936854987 | <i class="fa-regular fa-envelope"></i> GOVT.ITICollegeSardhana@gmain.com
+    </div>
+
+  </form>
+</div>
+
+<script>
+  function previewPhoto(e){
+    const img=document.getElementById('preview');
+    img.src=URL.createObjectURL(e.target.files[0]);
+    img.style.display='block';
+  }
+</script>
 
 </body>
 </html>
