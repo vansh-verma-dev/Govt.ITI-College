@@ -14,9 +14,8 @@ body {
 header {
   background: linear-gradient(rgb(58, 58, 255), blue);
   color: white;
-  position: relative;
-  z-index: 2000;
 }
+
 
 .nav-head {
   display: flex;
