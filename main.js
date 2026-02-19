@@ -1,20 +1,13 @@
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.getElementById("navMenu");
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+const overlay = document.getElementById("overlay");
 
-menuBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("active");
-  document.body.classList.toggle("menu-open");
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
 });
 
-document.addEventListener("click", () => {
-  navMenu.classList.remove("active");
-  document.body.classList.remove("menu-open");
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
 });
-
-navMenu.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
- 
-

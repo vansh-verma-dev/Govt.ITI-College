@@ -31,7 +31,8 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+   align-items: flex-start;
 }
 nav ul li a {
   text-decoration: none;
@@ -71,6 +72,15 @@ nav ul li a:hover{
     display:block;
   }
 
+  nav{
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  nav h1{
+  display: flex;
+  gap: 120px;
+  }
   nav ul{
     position:fixed;
     top:0;
@@ -79,6 +89,7 @@ nav ul li a:hover{
     height:100%;
     background:white;
     flex-direction:column;
+ align-items: flex-start;
     padding-top:80px;
     gap:0;
     transition:0.35s ease;
