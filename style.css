@@ -388,7 +388,9 @@ nav ul li a:hover{
   border: none;
   background: rgb(3, 3, 102);
 }
-
+#apply-btn:hover{
+background-color: darkblue;
+}
 /* ---Contact-section-- */
 
 .contact-section{
